@@ -119,10 +119,12 @@ public class ProductRepository  implements IProductRepository{
 
 
     }
+    @Override
     public List<Product> findAll(){
         return data;
     }
 
+    @Override
     public Product findById(Long id){
         return data.stream().filter(p->p.getId().equals(id))
                 .findFirst().orElseThrow();
