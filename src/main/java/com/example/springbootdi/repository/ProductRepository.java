@@ -5,7 +5,7 @@ import com.example.springbootdi.models.Product;
 import java.util.ArrayList;
 import  java.util.List;
 
-public class ProductRepository {
+public class ProductRepository  implements IProductRepository{
 
     List<Product> data;
 
@@ -113,6 +113,7 @@ public class ProductRepository {
                         new Product(98L,"Router ASUS",3200L),
                         new Product(99L,"SSD NVMe",3400L),
                         new Product(100L,"Disco HDD Toshiba",1800L)
+
                         )
         );
 
