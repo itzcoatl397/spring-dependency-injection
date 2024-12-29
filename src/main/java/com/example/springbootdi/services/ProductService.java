@@ -1,15 +1,19 @@
 package com.example.springbootdi.services;
 
 import com.example.springbootdi.models.Product;
+import com.example.springbootdi.repository.IProductRepository;
 import com.example.springbootdi.repository.ProductRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import  java.util.List;
 import java.util.stream.Collectors;
-
+@Component
 public class ProductService implements IProductService  {
 
 
-    private final ProductRepository productRepository = new ProductRepository();
+    @Autowired
+    private IProductRepository productRepository ;
 
 @Override
     public  List<Product> findAll(){

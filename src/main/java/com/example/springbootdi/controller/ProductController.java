@@ -1,7 +1,8 @@
 package com.example.springbootdi.controller;
 
 import com.example.springbootdi.models.Product;
-import com.example.springbootdi.services.ProductService;
+import com.example.springbootdi.services.IProductService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,7 +16,8 @@ import java.util.List;
 
 public class ProductController {
 
-    private   ProductService productService = new ProductService();
+@Autowired
+    private IProductService productService;
 
 
     @GetMapping
@@ -26,8 +28,6 @@ public class ProductController {
     }
     @GetMapping("/{id}")
     public Product show(@PathVariable Long id) {
-
-
 
         return productService.findById(id);
     }
