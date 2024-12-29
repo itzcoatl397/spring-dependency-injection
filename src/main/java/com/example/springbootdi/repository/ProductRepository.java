@@ -2,11 +2,12 @@ package com.example.springbootdi.repository;
 
 import com.example.springbootdi.models.Product;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import  java.util.List;
 
-@Component
+@Repository
 public class ProductRepository  implements IProductRepository{
 
     List<Product> data;
