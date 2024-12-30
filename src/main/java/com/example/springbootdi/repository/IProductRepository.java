@@ -8,4 +8,5 @@ public interface IProductRepository {
 
     List<Product> findAll();
     Product findById(Long id);
+
 }

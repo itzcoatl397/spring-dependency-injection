@@ -2,11 +2,8 @@ package com.example.springbootdi.controller;
 
 import com.example.springbootdi.models.Product;
 import com.example.springbootdi.services.IProductService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -16,9 +13,12 @@ import java.util.List;
 
 public class ProductController {
 
-@Autowired
-    private IProductService productService;
 
+    private  final IProductService productService;
+
+    public ProductController(IProductService productService) {
+        this.productService = productService;
+    }
 
     @GetMapping
     public List<Product> list() {
@@ -31,5 +31,6 @@ public class ProductController {
 
         return productService.findById(id);
     }
+
 
 }

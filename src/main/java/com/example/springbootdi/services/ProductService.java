@@ -2,9 +2,8 @@ package com.example.springbootdi.services;
 
 import com.example.springbootdi.models.Product;
 import com.example.springbootdi.repository.IProductRepository;
-import com.example.springbootdi.repository.ProductRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import  java.util.List;
@@ -13,10 +12,14 @@ import java.util.stream.Collectors;
 public class ProductService implements IProductService  {
 
 
-    @Autowired
-    private IProductRepository productRepository ;
 
-@Override
+    private final IProductRepository productRepository ;
+
+    public ProductService(@Qualifier("productList") IProductRepository productRepository) {
+        this.productRepository = productRepository;
+    }
+
+    @Override
     public  List<Product> findAll(){
         return  productRepository.findAll().stream().map(
                 p-> {
@@ -33,4 +36,8 @@ public class ProductService implements IProductService  {
     public Product findById(Long id){
         return productRepository.findById(id);
     }
+
+
+
+
 }
