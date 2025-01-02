@@ -4,16 +4,19 @@ import com.example.springbootdi.models.Product;
 import org.springframework.context.annotation.Primary;
 
 import org.springframework.stereotype.Repository;
+import org.springframework.web.context.annotation.RequestScope;
 
 import java.util.ArrayList;
 import  java.util.List;
 
-
+// solo existe por request
+@Primary
 @Repository("productList")
+@RequestScope
 public class ProductRepository  implements IProductRepository{
 
     List<Product> data;
-
+ // ya  no es singleton es por request
     public ProductRepository() {
 
         this.data = new ArrayList<>(
