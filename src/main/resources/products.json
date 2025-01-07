@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "Manzana",
+    "price": 15.5
+  },
+  {
+    "id": 2,
+    "name": "Pan integral",
+    "price": 45.5
+  },
+  {
+    "id": 3,
+    "name": "Leche deslactosada",
+    "price": 22
+  },
+  {
+    "id": 4,
+    "name": "Huevos orgánicos (12 piezas)",
+    "price": 80
+  },
+  {
+    "id": 5,
+    "name": "Pasta fusilli",
+    "price": 30
+  },
+  {
+    "id": 6,
+    "name": "Salsa de tomate",
+    "price": 25
+  },
+  {
+    "id": 7,
+    "name": "Queso mozzarella",
+    "price": 60
+  },
+  {
+    "id": 8,
+    "name": "Pollo entero",
+    "price": 150
+  },
+  {
+    "id": 9,
+    "name": "Zanahorias (1 kg)",
+    "price": 18
+  },
+  {
+    "id": 10,
+    "name": "Helado de chocolate",
+    "price": 70
+  }
+]

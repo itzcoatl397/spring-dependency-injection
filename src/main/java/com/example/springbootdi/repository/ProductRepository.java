@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Primary;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.web.context.annotation.RequestScope;
+import org.springframework.web.context.annotation.SessionScope;
 
 import java.util.ArrayList;
 import  java.util.List;
@@ -12,7 +13,7 @@ import  java.util.List;
 // solo existe por request
 @Primary
 @Repository("productList")
-@RequestScope
+
 public class ProductRepository  implements IProductRepository{
 
     List<Product> data;
